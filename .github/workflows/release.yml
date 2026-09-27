@@ -1,0 +1,30 @@
+name: release
+
+# Publishing a GitHub release publishes that version to npm. npm trusts this workflow directly
+# (trusted publishing over OIDC), so no npm token is stored anywhere, and each version carries a
+# provenance statement tying it to this repository and this run.
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - name: The release tag matches package.json
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: test "v$(node -p 'require("./package.json").version')" = "$TAG"
+      - run: npm publish --provenance

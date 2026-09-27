@@ -7,10 +7,10 @@
   "homepage": "https://agentfaro.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agentfaro/agentfaro-js.git"
+    "url": "git+https://github.com/AgentFaro/agentfaro-js.git"
   },
   "bugs": {
-    "url": "https://github.com/agentfaro/agentfaro-js/issues"
+    "url": "https://github.com/AgentFaro/agentfaro-js/issues"
   },
   "keywords": [
     "agentfaro",
@@ -32,7 +32,9 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "CHANGELOG.md"
   ],
   "sideEffects": false,
   "engines": {
@@ -47,5 +49,8 @@
   "devDependencies": {
     "@types/node": "^22.20.4",
     "typescript": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

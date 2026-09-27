@@ -1,7 +1,8 @@
 # AgentFaro JavaScript SDK
 
-[![ci](https://github.com/agentfaro/agentfaro-js/actions/workflows/ci.yml/badge.svg)](https://github.com/agentfaro/agentfaro-js/actions/workflows/ci.yml)
-[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@agentfaro/sdk.svg)](https://www.npmjs.com/package/@agentfaro/sdk)
+[![ci](https://github.com/AgentFaro/agentfaro-js/actions/workflows/ci.yml/badge.svg)](https://github.com/AgentFaro/agentfaro-js/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AgentFaro/agentfaro-js/blob/main/LICENSE)
 
 Send leads from any website form or server into [AgentFaro](https://agentfaro.com), the AI-search
 marketing service for residential real estate agents.
@@ -22,7 +23,7 @@ in the same inbox, with the same spam scoring and repeat detection.
 Node.js 20 or later.
 
 ```sh
-npm install github:agentfaro/agentfaro-js
+npm install @agentfaro/sdk
 ```
 
 ## Quick start
@@ -74,7 +75,7 @@ export async function POST(request: Request) {
 }
 ```
 
-More in [`examples/`](examples).
+More in [`examples/`](https://github.com/AgentFaro/agentfaro-js/tree/main/examples).
 
 ## Lead fields
 
@@ -160,4 +161,4 @@ month. **Be the agent AI recommends.** [agentfaro.com](https://agentfaro.com)
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/AgentFaro/agentfaro-js/blob/main/LICENSE)
