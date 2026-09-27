@@ -1,0 +1,51 @@
+{
+  "name": "@agentfaro/sdk",
+  "version": "0.1.0",
+  "description": "Send leads from any website form or server into AgentFaro, the AI-search marketing service for real estate agents.",
+  "license": "MIT",
+  "author": "AgentFaro (https://agentfaro.com)",
+  "homepage": "https://agentfaro.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentfaro/agentfaro-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agentfaro/agentfaro-js/issues"
+  },
+  "keywords": [
+    "agentfaro",
+    "real-estate",
+    "realtor",
+    "real-estate-agent",
+    "leads",
+    "lead-capture",
+    "sdk"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test --test-timeout=10000 \"test/**/*.test.ts\"",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "typescript": "^7.0.2"
+  }
+}
